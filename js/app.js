@@ -22,6 +22,7 @@ Enemy.prototype.update = function(dt) {
   this.x = this.x + (dt * this.speed);
   if (this.x > 500) {
     this.x = -100;
+    this.speed = 200 + Math.random() * 300;
   }
   if (player.x - this.x < 50 && player.x - this.x > -50) {
     if (player.y - this.y < 30 && player.y - this.y > -30) {
@@ -52,6 +53,7 @@ class Player {
       this.x = 200;
       this.y = 380;
       this.score += 1;
+      
     }
   }
   render() {
@@ -71,24 +73,21 @@ class Player {
 }
 
 
-
-
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 let allEnemies = [];
+let y = [225,145,65];
 
-let createEnemies = function () {
-  for (var i = 0; i < 5; i++) {
-    let enemy = new Enemy(-100,225,50 + Math.floor(Math.random() * 512));
+y.forEach(function (y) {
+  for (var i = 0; i < 1; i++) {
+    let enemy = new Enemy(-100, y, 200 + Math.random() * 300);
     allEnemies.push(enemy);
   }
-}();
-// var enemy1 = new Enemy(-100,225,50);
-// allEnemies.push(enemy1);
+});
+
+
 let player = new Player(200,380);
-
-
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
