@@ -96,6 +96,7 @@ var Engine = (function(global) {
         player.update();
         gem.update();
         rock.update();
+        // gameOver();
     }
 
     /* This function initially draws the "game level", it will then call
@@ -158,9 +159,30 @@ var Engine = (function(global) {
         player.render();
         rock.render();
         ctx.font = "15px Arial";
+        ctx.fillStyle = "white";
+        // ctx.fillText('Lives: ' + player.lives, 220,570);
         ctx.fillText('Your Score: ' + player.score, 5,570);
         ctx.fillText('Gems: ' + player.gemsCollected, 420,570);
     }
+
+    // function gameOver() {
+    //   if (player.lives > 0) {
+    //     if (player.score == 2) {
+    //       bubbleRect(125,160,460,240,25,10,'#fff','#000');
+    //       ctx.font = '16pt Arial';
+    //       ctx.fillStyle = '#000';
+    //       ctx.strokeStyle = '#fff';
+    //       ctx.lineWidth = 5;
+    //       // ctx.textAlign = "center";
+    //       ctx.fillText("You Won. Score: " + player.score + " Gems Collected: " + player.gemsCollected, 220, 300);
+    //     }
+    //   } else if (player.lives == 0) {
+    //
+    //     ctx.font = "30px Comic Sans MS";
+    //     ctx.fillStyle = "red";
+    //     ctx.fillText("Game Over", 220, 300);
+    //   }
+    // }
 
     /* This function does nothing but it could have been a good place to
      * handle game reset states - maybe a new game menu or a game over screen
