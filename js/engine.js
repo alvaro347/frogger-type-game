@@ -94,6 +94,8 @@ var Engine = (function(global) {
             enemy.update(dt);
         });
         player.update();
+        gem.update();
+        rock.update();
     }
 
     /* This function initially draws the "game level", it will then call
@@ -152,10 +154,12 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.render();
         });
-
+        gem.render();
         player.render();
+        rock.render();
         ctx.font = "15px Arial";
-        ctx.fillText('Your Score: ' + player.score, 0,570);
+        ctx.fillText('Your Score: ' + player.score, 5,570);
+        ctx.fillText('Gems: ' + player.gemsCollected, 420,570);
     }
 
     /* This function does nothing but it could have been a good place to
@@ -176,7 +180,9 @@ var Engine = (function(global) {
         'images/grass-block.png',
         'images/enemy-bug.png',
         'images/char-boy.png',
-        'images/char-horn-girl.png'
+        'images/char-horn-girl.png',
+        'images/gem-blue.png',
+        'images/rock.png'
     ]);
     Resources.onReady(init);
 
