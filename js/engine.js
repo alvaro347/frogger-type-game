@@ -95,7 +95,7 @@ var Engine = (function(global) {
         });
         player.update();
         gem.update();
-        rock.update();
+        // rock.update();
         // gameOver();
     }
 
