@@ -1,21 +1,59 @@
-# Arcade Game - Udacity Project (Alvaro Fernadez)
-=================================================
+# Frogger Type Game
+
+Welcome to the javascript Frogger type game project! This project is a simple implementation of the classic Frogger type game using JavaScript, HTML, and CSS. The goal is to navigate the player across the board while avoiding enemies and collecting gems.
 
 ## Table of Contents
 
-* Files
-* Instructions
+- [Frogger Type Game](#frogger-type-game)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Game Rules](#game-rules)
+  - [Installation](#installation)
+  - [File Structure](#file-structure)
 
-## Files
+## Introduction
 
-- index.html: HTML of the game
-- app.js: Javascript file of the game
-- imgages folder: for background and medal
-- style.css: stylesheet of the game
-- engine.js and resources.js: necessary files for the game to run.
+This project demonstrates how to create a simple game using JavaScript, HTML, and CSS. It includes basic game mechanics such as player movement, enemy collision, and collectible items.
 
-## Instructions
+## Game Rules
 
-To open the game simply store the css, imgages and js folder in the same root of the index.html document. Open the index.html document with your browser or drag it and the game will show up.
+- Use the arrow keys to move the player.
+- Avoid enemies (bugs) to prevent losing lives.
+- Collect gems for extra points.
+- Reach the water at the top of the board to score points.
+- The game ends if the player loses all lives.
 
-In this game you have a Player and Enemies (Bugs). The goal of the player is to reach the water, without colliding into any one of the enemies. The player can move left, right, up and down. The enemies move in varying speeds on the paved block portion of the scene. Once a the player collides with an enemy, the game is reset and the player moves back to the start square. Once the player reaches the water the game is won. Try collect as many gems as possible and reach the end. The game is infinite (lives and gameover to be added in the future)
+## Installation
+
+To run this game locally, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/alvaro347/frogger-type-game.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd frogger-type-game
+```
+
+3. Open the `index.html` file in your browser to start the game.
+
+## File Structure
+
+
+```bash
+frogger-type-game/
+├── css/
+│   └── style.css        # Styles for the game
+├── images/
+│   └── *.png            # Game assets (sprites)
+├── js/
+│   ├── app.js           # Game logic
+│   ├── engine.js        # Game engine
+│   └── resources.js     # Resource loader
+├── index.html           # Main HTML file
+└── README.md            # Project documentation
+```

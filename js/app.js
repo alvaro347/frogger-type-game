@@ -1,7 +1,3 @@
-/*jshint esversion: 6 */
-// Udacity Project: Arcade Game
-// Alvaro Fernandez
-
 // NOTE : Enemy class: generates a enemy object with its location, sprite
 // and speed. The update function will have the collision with the player
 class Enemy {
@@ -32,8 +28,7 @@ class Enemy {
   }
 }
 
-
-// NOTE: Player class: will create a player objetc with the location score,
+// NOTE: Player class: will create a player object with the location score,
 // gems collected and the sprite. The update attribute will check
 // when the player reaches the end of the level to place the gem and
 // rock in a new random position.
@@ -97,7 +92,6 @@ class Player {
     }
   }
 }
-
 
 // NOTE: Gems Class will create gems and check if the player takes it.
 class Gems {
