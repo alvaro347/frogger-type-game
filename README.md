@@ -2,6 +2,12 @@
 
 Welcome to the javascript Frogger type game project! This project is a simple implementation of the classic Frogger type game using JavaScript, HTML, and CSS. The goal is to navigate the player across the board while avoiding enemies and collecting gems.
 
+Screenshot of the game:
+
+<p align="center">
+  <img src="./images/frogger-type-game-example.png" width="400" style="margin: 0 auto">
+</p>
+
 ## Table of Contents
 
 - [Frogger Type Game](#frogger-type-game)
